@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/error.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/view/400.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/view/500.jsp</location>
+    </error-page>
+    <!-- Login Check Start Here-->
+    <servlet>
+        <servlet-name>LoginPageDisplay</servlet-name>
+        <servlet-class>com.nic.model.LoginPageDisplay</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginPageDisplay</servlet-name>
+        <url-pattern>/LoginPageDisplay</url-pattern>
+    </servlet-mapping>
+    <!-- Login Check End Here-->
+    <servlet>
+        <servlet-name>DeviceMasterServlet</servlet-name>
+        <servlet-class>com.nic.master.DeviceMasterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeviceMasterServlet</servlet-name>
+        <url-pattern>/view/DeviceMasterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>MinistryMasterServlet</servlet-name>
+        <servlet-class>com.nic.master.MinistryMasterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MinistryMasterServlet</servlet-name>
+        <url-pattern>/view/MinistryMasterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UserDepartment</servlet-name>
+        <servlet-class>com.nic.form.populate.UserDepartment</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserDepartment</servlet-name>
+        <url-pattern>/UserDepartment</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UserSection</servlet-name>
+        <servlet-class>com.nic.form.populate.UserSection</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserSection</servlet-name>
+        <url-pattern>/UserSection</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UserDesignation</servlet-name>
+        <servlet-class>com.nic.form.populate.UserDesignation</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserDesignation</servlet-name>
+        <url-pattern>/UserDesignation</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UserEmployment</servlet-name>
+        <servlet-class>com.nic.form.populate.UserEmployment</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserEmployment</servlet-name>
+        <url-pattern>/UserEmployment</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Floor</servlet-name>
+        <servlet-class>com.nic.form.populate.Floor</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Floor</servlet-name>
+        <url-pattern>/Floor</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Location</servlet-name>
+        <servlet-class>com.nic.form.populate.Location</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Location</servlet-name>
+        <url-pattern>/Location</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeviceType</servlet-name>
+        <servlet-class>com.nic.form.populate.DeviceType</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeviceType</servlet-name>
+        <url-pattern>/DeviceType</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UserMinistry</servlet-name>
+        <servlet-class>com.nic.form.populate.UserMinistry</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserMinistry</servlet-name>
+        <url-pattern>/UserMinistry</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Wing</servlet-name>
+        <servlet-class>com.nic.form.populate.Wing</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Wing</servlet-name>
+        <url-pattern>/Wing</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>MainFormServlet</servlet-name>
+        <servlet-class>com.nic.master.form.MainFormServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MainFormServlet</servlet-name>
+        <url-pattern>/MainFormServlet</url-pattern>
+    </servlet-mapping>
+    <!-- Captcha Start Here-->
+    <servlet>
+        <servlet-name>Captcha</servlet-name>
+        <servlet-class>com.nic.utility.Captcha</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Captcha</servlet-name>
+        <url-pattern>/Captcha</url-pattern>
+    </servlet-mapping>
+    <!-- Captcha End Here -->
+    <!-- Log-In Validation -->
+    <servlet>
+        <servlet-name>Acceptance</servlet-name>
+        <servlet-class>com.nic.validation.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Acceptance</servlet-name>
+        <url-pattern>/Acceptance</url-pattern>
+    </servlet-mapping>
+    <!-- Location Master Start -->
+    <servlet>
+        <servlet-name>LocationMasterServlet</servlet-name>
+        <servlet-class>com.nic.master.LocationMasterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LocationMasterServlet</servlet-name>
+        <url-pattern>/view/LocationMasterServlet</url-pattern>
+    </servlet-mapping>
+    <!-- Location Master End -->
+    <!-- Floor Master Start -->
+    <servlet>
+        <servlet-name>FloorMasterServlet</servlet-name>
+        <servlet-class>com.nic.master.FloorMasterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FloorMasterServlet</servlet-name>
+        <url-pattern>/view/FloorMasterServlet</url-pattern>
+    </servlet-mapping>
+    <!-- Floor Master End -->
+    <!-- Menu Master Start     -->
+    <servlet>
+        <servlet-name>MenuMasterServlet</servlet-name>
+        <servlet-class>com.nic.master.MenuMasterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MenuMasterServlet</servlet-name>
+        <url-pattern>/view/MenuMasterServlet</url-pattern>
+    </servlet-mapping>
+    <!-- Menu  Master End     -->
+    <!--    Sub Menu Master Start     -->
+    <servlet>
+        <servlet-name>SubmenuMasterServlet</servlet-name>
+        <servlet-class>com.nic.master.SubmenuMasterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SubmenuMasterServlet</servlet-name>
+        <url-pattern>/view/SubmenuMasterServlet</url-pattern>
+    </servlet-mapping>
+    <!--Sub Menu Master End    -->
+    <!--Access Level Master End    -->
+    <servlet>
+        <servlet-name>AssessMasterServlet</servlet-name>
+        <servlet-class>com.nic.master.AssessMasterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AssessMasterServlet</servlet-name>
+        <url-pattern>/view/AssessMasterServlet</url-pattern>
+    </servlet-mapping>
+    <!--Access Level Master End    -->
+    <servlet>
+        <servlet-name>SectionMasterServlet</servlet-name>
+        <servlet-class>com.nic.master.SectionMasterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SectionMasterServlet</servlet-name>
+        <url-pattern>/view/SectionMasterServlet</url-pattern>
+    </servlet-mapping>
+    <filter>
+        <filter-name>AuthenticationFilter</filter-name>
+        <filter-class>com.nic.filters.AuthenticationFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthenticationFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!-- DepartmentMasterServlet Starts -->
+<!--    <servlet>
+        <servlet-name>DepartmentMasterServlet</servlet-name>
+        <servlet-class>com.nic.master.DepartmentMasterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DepartmentMasterServlet</servlet-name>
+        <url-pattern>/view/DepartmentMasterServlet</url-pattern>
+    </servlet-mapping>-->
+    <!-- DepartmentMasterServlet Ends -->
+    <!-- WingMasterServlet Starts -->
+    <servlet>
+        <servlet-name>WingMasterServlet</servlet-name>
+        <servlet-class>com.nic.master.WingMasterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WingMasterServlet</servlet-name>
+        <url-pattern>/view/WingMasterServlet</url-pattern>
+    </servlet-mapping>
+    <!-- WingMasterServlet Ends -->
+    <!-- EmploymentTypeMasterServlet Starts -->
+<!--    <servlet>
+        <servlet-name>EmploymentTypeMasterServlet</servlet-name>
+        <servlet-class>com.nic.master.EmploymentTypeMasterServlet</servlet-class>;
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmploymentTypeMasterServlet</servlet-name>
+        <url-pattern>/view/EmploymentTypeMasterServlet</url-pattern>
+    </servlet-mapping>-->
+    <!-- Employment Type Master Servlet Ends -->
+    <!-- Designation Master Servlet Starts -->
+    <servlet>
+        <servlet-name>DesignationMasterServlet</servlet-name>
+        <servlet-class>com.nic.master.DesignationMasterServlet</servlet-class>;
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DesignationMasterServlet</servlet-name>
+        <url-pattern>/view/DesignationMasterServlet</url-pattern>
+    </servlet-mapping>
+    <!-- Designation Master Servlet Ends -->
+    <!-- Allocated Device Save Start -->
+    <servlet>
+        <servlet-name>allocatedDeviceSave</servlet-name>
+        <servlet-class>com.nic.form.servlet.save.AllocatedDeviceSave</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>allocatedDeviceSave</servlet-name>
+        <url-pattern>/view/allocatedDeviceSave</url-pattern>
+    </servlet-mapping>
+    <!-- Allocated Device Save Ends -->
+    <!-- Get Ministry Servlet Start -->
+    <servlet>
+        <servlet-name>getMinistryServlet</servlet-name>
+        <servlet-class>com.nic.form.populate.GetMinistryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getMinistryServlet</servlet-name>
+        <url-pattern>/view/getMinistryServlet</url-pattern>
+    </servlet-mapping>
+    <!-- Get Ministry Servlet End -->
+    <!-- Get Department Servlet Start -->
+    <servlet>
+        <servlet-name>getDepartmentServlet</servlet-name>
+        <servlet-class>com.nic.form.populate.GetDepartmentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getDepartmentServlet</servlet-name>
+        <url-pattern>/view/getDepartmentServlet</url-pattern>
+    </servlet-mapping>
+    <!-- Get Department Servlet End -->
+    <!-- Get Section Servlet Start -->
+    <servlet>
+        <servlet-name>getSectionServlet</servlet-name>
+        <servlet-class>com.nic.form.populate.GetSectionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getSectionServlet</servlet-name>
+        <url-pattern>/view/getSectionServlet</url-pattern>
+    </servlet-mapping>
+    <!-- Get Department Servlet End -->
+    <!-- GenerateIPSegmentServlet Start -->
+    <servlet>
+        <servlet-name>generateIPSegmentSave</servlet-name>
+        <servlet-class>com.nic.form.servlet.save.GenerateIPSegmentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>generateIPSegmentSave</servlet-name>
+        <url-pattern>/view/generateIPSegmentSave</url-pattern>
+    </servlet-mapping>
+    <!-- GenerateIPSegmentServlet End -->
+    <!--OS Master Master Start   -->
+    <servlet>
+        <servlet-name>OsMasterServlet</servlet-name>
+        <servlet-class>com.nic.master.OsMasterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OsMasterServlet</servlet-name>
+        <url-pattern>/view/OsMasterServlet</url-pattern>
+    </servlet-mapping>
+    <!--OS Master End    -->
+    <!--Antivirus Master Start   -->
+    <servlet>
+        <servlet-name>AntivirusMasterServlet</servlet-name>
+        <servlet-class>com.nic.master.AntivirusMasterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AntivirusMasterServlet</servlet-name>
+        <url-pattern>/view/AntivirusMasterServlet</url-pattern>
+    </servlet-mapping>
+    <!--Antivirus Master End    -->
+    <!--RAM Master Start   -->
+    <servlet>
+        <servlet-name>RamMasterServlet</servlet-name>
+        <servlet-class>com.nic.master.RamMasterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RamMasterServlet</servlet-name>
+        <url-pattern>/view/RamMasterServlet</url-pattern>
+    </servlet-mapping>
+    <!--RAM Master End    -->
+    
+     <!-- User Profile Detail Start -->
+    <servlet>
+        <servlet-name>userMasterUISave</servlet-name>
+        <servlet-class>com.nic.form.servlet.save.UserMasterUISave</servlet-class>
+        <multipart-config>
+            <max-file-size>2097152</max-file-size>
+        </multipart-config>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>userMasterUISave</servlet-name>
+        <url-pattern>/view/userMasterUISave</url-pattern>
+    </servlet-mapping>
+    <!-- User Profile Detail Ends -->
+    
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
